@@ -12,5 +12,7 @@ i\hbar \frac {\partial u}{\partial t} =-\frac{\hbar^2}{2m}\frac{\partial^2u}{\pa
 The equation only gets a physical meaning if it is squared and integrated as shown in equation 2. After that it can be interpreted as a probability to find the particle at a given point in space. (Griffiths & Schroeter, 2018)
 
 ```math
+\begin{equation}
 E = mc^2
+\end{equation}
 ```
