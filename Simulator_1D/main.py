@@ -5,6 +5,8 @@ from Simulator_1D.Simulation import Simulation
 grid_parameters = GridParameters()
 grid = Grid(grid_parameters)
 
+
+
 my_sym = Simulation(grid, grid_parameters.potential_function)
 my_sym.initFunction(grid_parameters.initial_function)
 

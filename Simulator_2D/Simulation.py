@@ -13,16 +13,16 @@ class Simulation:
     # Some wrapper functions
     ##################################
     def initFunction(self, func):
-        self.grid.initFunction(func)
+        self.grid.set_init_function(func)
 
     def plot3D(self, time_step=0, square=True, use_for_gif=False):
-        self.grid.plot3D(time_step, square, use_for_gif)
+        self.grid.plot_3d(time_step, square, use_for_gif)
 
     def heatmap(self, time_step=0, square=True, save=False):
         self.grid.heatmap(time_step, square, save)
 
     def plotEnergyEvolution(self, save=False, log=False):
-        self.grid.plotEnergyEvolution(save, log)
+        self.grid.plot_energy_evolution(save, log)
 
     def gif(self):
         self.grid.gif()

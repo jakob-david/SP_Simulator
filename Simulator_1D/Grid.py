@@ -6,41 +6,58 @@ import os
 
 
 class Grid:
+
     def __init__(self, grid_parameters):
+        """
+        The grid on which the simulation is performed.
+
+        :param grid_parameters: The parameters for the grid. (dataclass)
+        """
+
         self.grid_parameters = grid_parameters
         self.grid = np.zeros((self.grid_parameters.time_steps, self.grid_parameters.space_steps), dtype=np.complex_)
         self.energy = np.zeros(self.grid_parameters.time_steps)
         self.method = ""
 
         # Precalculate the x-axis since it is used quite often
-        ########################################################
+        # ---------------------------------------------------------------
         self.x_axis = np.zeros(self.grid_parameters.space_steps, dtype=np.complex_)
         offset = -1 * int(self.grid_parameters.space_steps / 2) * self.grid_parameters.space_step_size
         if (self.grid_parameters.space_steps % 2) == 0:
             offset = offset + (self.grid_parameters.space_step_size / 2)
         for i in range(0, self.grid_parameters.space_steps):
             self.x_axis[i] = offset + i * self.grid_parameters.space_step_size
+        # ---------------------------------------------------------------
 
-    def initFunction(self, func, normalize=True):
+    def set_init_function(self, func, normalize=True):
+        """
+        Sets the initial function.
+
+        :param func: The initial function.
+        :param normalize: Set to true if the function should be normalized.
+        """
+
         if normalize:
             self.grid[0] = func(self.x_axis) / np.linalg.norm(func(self.x_axis))
         else:
             self.grid[0] = func(self.x_axis)
 
-    def printGrid(self):
+    def print_grid(self):
+        """
+        Prints the grid.
+        """
+
         print(np.flipud(self.grid.round(2)))
 
-    ##############################################################
-    ##############################################################
-    #
-    # Functions for plotting the System
-    #
-    ##############################################################
-    ##############################################################
+    # Functions for plotting the system.
+    # ---------------------------------------------------------------
+    def plot_energy_evolution(self, save=False, log=False):
+        """
+        Plots the energy evolution of the system.
 
-    # Funktion to plot the energy evolution of the system
-    ##############################################################
-    def plotEnergyEvolution(self, save=False, log=False):
+        :param save: Set true if the plot should be saved instead of shown.
+        :param log: Set true if the log should be taken for the y-axis.
+        """
 
         time_axis = np.zeros(self.grid_parameters.time_steps)
 
@@ -68,9 +85,14 @@ class Grid:
         else:
             plt.show()
 
-    # Funktion to plot a 2D representation of one time-step
-    ##############################################################
-    def plot2D(self, time_step, pot=lambda a, u: 0, use_for_gif=False):
+    def plot_2d(self, time_step, pot=lambda a, u: 0, use_for_gif=False):
+        """
+        Makes a 2D plot of the system at a given timestep.
+
+        :param time_step: The timestep of the plot.
+        :param pot: The potential function of the system.
+        :param use_for_gif: Only for internal use. (Is set to true when generating a gif.)
+        """
 
         # Deactivate Warnings while generating gif
         warnings.filterwarnings('ignore')
@@ -108,9 +130,12 @@ class Grid:
 
         warnings.filterwarnings('default')
 
-    # Funktion to plot a 3D wireframe of the whole simulation.
-    ##############################################################
-    def plot3D(self, square=True):
+    def plot_3d(self, square=True):
+        """
+        Plots a 3D plot of the whole system.
+
+        :param square: Set to true if the system should be squared.
+        """
 
         # Deactivate Warnings while generating gif
         warnings.filterwarnings('ignore')
@@ -119,24 +144,28 @@ class Grid:
         for i in range(0, self.grid_parameters.time_steps):
             y_axis[i] = i * self.grid_parameters.time_step_size
 
-        X, Y = np.meshgrid(self.x_axis.real, y_axis)
+        x, y = np.meshgrid(self.x_axis.real, y_axis)
 
         if square:
-            Z = np.square(abs(self.grid))
+            z = np.square(abs(self.grid))
         else:
-            Z = self.grid.real
+            z = self.grid.real
 
         ax = plt.axes(projection='3d')
-        ax.plot_wireframe(X, Y, Z, color='green')
+        ax.plot_wireframe(x, y, z, color='green')
         ax.set_xlabel('space')
         ax.set_ylabel('time')
         ax.set_zlabel('wave function')
 
         warnings.filterwarnings('default')
 
-    # Funktion to plot a 2D heatmap of the whole simulation.
-    ##############################################################
     def heatmap(self, square=True, save=False):
+        """
+        Makes a heatmap of the whole system.
+
+        :param square: Set to true if the system should be squared.
+        :param save: Set true if the plot should be saved instead of shown.
+        """
 
         if square:
             z = np.square(abs(self.grid))
@@ -163,16 +192,19 @@ class Grid:
             plt.show()
             plt.close()
 
-    # Funktion to create a gif from the 2D-plots of each time-step
-    ##############################################################
     def gif(self, pot=lambda a: 0):
+        """
+        Makes a gif of the whole system. Consisting of a 2D plot of every timestep.
+
+        :param pot: The potential function of the system.
+        """
 
         if not os.path.exists("./gif"):
             os.makedirs("./gif")
 
         for i in range(0, self.grid_parameters.time_steps):
             print("Generating picture: (" + str(i + 1) + "/" + str(self.grid_parameters.time_steps) + ")")
-            self.plot2D(i, pot, True)
+            self.plot_2d(i, pot, True)
 
         images = list()
         for i in range(0, self.grid_parameters.time_steps):
