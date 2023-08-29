@@ -85,5 +85,5 @@ Due to the fact that a division by $0$ is not allowed, one must choose a suffici
 The results shown in Figure 1 are valid in the case of a free wave and therefore $V=0$. Furthermore, to highlight the effect of the Newtonian gravitational potential ${\hat{H}}_x$ was slightly modified to ${\hat{H}}_x=V+ {5V}init$ and periodic boundary conditions were used. As initial condition two gaussians were utilised, which were normalised in a way that the area bellow the curve is equal to $1$. The code can be found in this repository.
 
 <p align="center">
-![picture_1.png](pictures_for_readme%2Fpicture_1.png)
+  <img src="./pictures_for_readme/picture_1.png">
 </p>
