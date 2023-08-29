@@ -22,6 +22,7 @@ The Schrödinger-Poisson equation modifies equation 1 by adding a Newtonian grav
 
 ```math
 i\hbar\frac{\partial u}{\partial t}=-\frac{\hbar^2}{2m}\frac{\partial^2u}{\partial x^2}+Vu+m\Phi u
-
+```
+```math
 \Phi=\ \frac{1}{\nabla^2}4\pi Gm\left|u\right|^2
 ```
