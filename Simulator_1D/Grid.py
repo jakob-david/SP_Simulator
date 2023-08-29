@@ -2,11 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import warnings
 import imageio.v2 as imageio
+import os
 
 
 class Grid:
-    def __init__(self, GridParameters):
-        self.grid_parameters = GridParameters
+    def __init__(self, grid_parameters):
+        self.grid_parameters = grid_parameters
         self.grid = np.zeros((self.grid_parameters.time_steps, self.grid_parameters.space_steps), dtype=np.complex_)
         self.energy = np.zeros(self.grid_parameters.time_steps)
         self.method = ""
@@ -42,10 +43,11 @@ class Grid:
     def plotEnergyEvolution(self, save=False, log=False):
 
         time_axis = np.zeros(self.grid_parameters.time_steps)
+
         for i in range(0, self.grid_parameters.time_steps):
             time_axis[i] = i * self.grid_parameters.time_step_size
 
-        if (log):
+        if log:
             plt.plot(time_axis, self.energy)
             plt.yscale("log")
         else:
@@ -56,9 +58,12 @@ class Grid:
         plt.ylabel("energy")
         plt.title("Energy Evolution")
 
-        if (save):
-            plt.savefig("energy.png", dpi=300)
-            # files.download("energy.png") TODO: file saving
+        if save:
+
+            if not os.path.exists("./pictures"):
+                os.makedirs("./pictures")
+
+            plt.savefig("./pictures/energy.png", dpi=300)
             plt.close()
         else:
             plt.show()
@@ -97,8 +102,8 @@ class Grid:
         ax2.set_ylabel("potential")
         ax1.set_xlabel("space")
 
-        if (use_for_gif):
-            plt.savefig("picture_for_giv_" + str(time_step) + ".png")
+        if use_for_gif:
+            plt.savefig("./gif/picture_for_giv_" + str(time_step) + ".png")
             plt.close()
 
         warnings.filterwarnings('default')
@@ -116,7 +121,7 @@ class Grid:
 
         X, Y = np.meshgrid(self.x_axis.real, y_axis)
 
-        if (square):
+        if square:
             Z = np.square(abs(self.grid))
         else:
             Z = self.grid.real
@@ -148,8 +153,11 @@ class Grid:
         cbar.set_label('squared wave function value')
 
         if save:
-            plt.savefig("2D-heatmap.png", dpi=300)
-            # files.download("2D-heatmap.png") TODO: file saving
+
+            if not os.path.exists("./pictures"):
+                os.makedirs("./pictures")
+
+            plt.savefig("./pictures/2D-heatmap.png", dpi=300)
             plt.close()
         else:
             plt.show()
@@ -159,12 +167,14 @@ class Grid:
     ##############################################################
     def gif(self, pot=lambda a: 0):
 
+        if not os.path.exists("./gif"):
+            os.makedirs("./gif")
+
         for i in range(0, self.grid_parameters.time_steps):
             print("Generating picture: (" + str(i + 1) + "/" + str(self.grid_parameters.time_steps) + ")")
             self.plot2D(i, pot, True)
 
         images = list()
         for i in range(0, self.grid_parameters.time_steps):
-            images.append(imageio.imread("picture_for_giv_" + str(i) + ".png"))
+            images.append(imageio.imread("gif/picture_for_giv_" + str(i) + ".png"))
         imageio.mimsave("simulation.gif", images)
-        # files.download('simulation.gif') TODO: file saving

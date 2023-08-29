@@ -10,5 +10,5 @@ my_sym.initFunction(grid_parameters.initial_function)
 
 my_sym.SO_Poisson()
 my_sym.heatmap(True)
-# my_sym.plotEnergyEvolution()
-# my_sym.gif()
+#my_sym.plotEnergyEvolution(True)
+#my_sym.gif()
