@@ -28,7 +28,7 @@ class Simulation:
         self.grid.gif()
 
     def plot3DPotential(self, download=False):
-        self.grid.plot3DPotential(download)
+        self.grid.plot_3d_potential(download)
 
     # Split-Time Poisson
     ##################################

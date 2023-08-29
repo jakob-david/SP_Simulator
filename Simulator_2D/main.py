@@ -10,7 +10,7 @@ my_sym.initFunction(grid_parameters.initial_function)
 
 my_sym.SO_Poisson_2D()
 
-#my_sym.gif()
+my_sym.gif()
 
 my_sym.heatmap(0, True, True)
 my_sym.heatmap(100, True, True)

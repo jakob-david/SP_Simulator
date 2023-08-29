@@ -51,6 +51,7 @@ class Grid:
 
     # Functions for plotting the system.
     # ---------------------------------------------------------------
+
     def plot_energy_evolution(self, save=False, log=False):
         """
         Plots the energy evolution of the system.

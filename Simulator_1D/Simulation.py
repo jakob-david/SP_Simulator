@@ -4,8 +4,6 @@ import math
 
 class Simulation:
 
-    # Constructor
-    ##################################
     def __init__(self, grid, potential=lambda x=0: 0):
         """
         Class that carries out the actual simulation.
