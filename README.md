@@ -65,4 +65,4 @@ Next, it can be observed that the part in position space and the part in momentu
 \frac{\partial^2u_x}{\partial x^2}=\mathcal{F}^{-1}\left[\frac{{k_x}^2}{2}\mathcal{F}\left[u_x\right]\right]
 ```
 
-Because, the Fourier Transform is computationally inefficient, the Fast Fourier Transform (FFT) will be used. One complete timestep of the algorithm is displayed in equation 11, where $\mathcal{F}$ now denotes the FFT, ${\hat{U}}_x=e-iHx∆t$ and ${\hat{U}}_k=e-iHk∆t$. (Schloss, 2022)
+Because, the Fourier Transform is computationally inefficient, the Fast Fourier Transform (FFT) will be used. One complete timestep of the algorithm is displayed in equation 11, where $\mathcal{F}$ now denotes the FFT, ${\hat{U}}_x=e^{-i\hat{H}_x∆t}$ and ${\hat{U}}_k=e^{-i\hat{H}_k∆t}$. (Schloss, 2022)
