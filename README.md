@@ -48,6 +48,6 @@ i\frac{\partial u}{\partial t}=-\frac{1}{2}\frac{\partial^2u}{\partial x^2}+Vu
 In a first step the Hamiltonian of the system will be split into a component in position space ${\hat{H}}_x=V$ and into a component in momentum space ${\hat{H}}_k=-\frac{1}{2}\frac{\partial^2}{\partial x^2}$. Next, a somewhat general solution to the system is assumed which is displayed in equation 8. It is also presumed that the system is simulated by concatenating a series of small timesteps $∆t$. (Schloss, 2022)
 
 ```math
-u(x,t+∆t)
+u(x,t+∆t)=[e^-iH∆t]
 ```
 
