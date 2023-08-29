@@ -77,4 +77,5 @@ Now the algorithm for simulation the Schrödinger Equation is finished and can b
 V_{int}=\frac{1}{\nabla^2}\left|u_x\right|^2=\mathcal{F}^{-1}\left[\frac{1}{{k_x}^2}\mathcal{F}\left[\left|u_x\right|^2\right]\right]
 ```
 
-Due to the fact that a division by $0$ is not allowed, one must choose a sufficiently small number greater than $0$ in the case that the wave number is $0$. The result of equation 12 can be thought of as a somewhat internal potential due to the Newtonian gravitational force. The routine in equation 11 will basically stay the same. The only thing that changes is the operator ${\hat{H}}_x$ which now will be ${\hat{H}}_x=V+\ V_{int}$ instead of just $V$ (Johansson, 2010).
+Due to the fact that a division by $0$ is not allowed, one must choose a sufficiently small number greater than $0$ in the case that the wave number is $0$. The result of equation 12 can be thought of as a somewhat internal potential due to the Newtonian gravitational force. The routine in equation 11 will basically stay the same. The only thing that changes is the operator ${\hat{H}}_x$ which now will be $\hat{H}_x=V+V_{int}$ instead of just $V$ (Johansson, 2010).
+
