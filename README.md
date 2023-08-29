@@ -57,4 +57,7 @@ Using the Baker-Campbell-Housdorff theorem this solution can be split. The thus 
 u(x,t+∆t)=[e^{-i\hat{H}_x∆t}e^{-i\hat{H}_k∆t}e^{[i\hat{H}_x,i\hat{H}_k]∆t^2}]u(x,t)
 ```
 
+Since the cross-term scales with ∆t2 in contrast to ∆t its contribution will be small and can therefore be ignored. Because of this, the overall error of this method is $Ο(∆t^{2})$ (Schloss, 2022).
+
+Next, it can be observed that the part in position space and the part in momentum space can be dealt separately. The part in position space can be calculated relatively easily since it is just a simple multiplication. The part in momentum space is a little bit more difficult since it contains the operator $\frac{\partial^2}{\partial x^2}$. To circumvent this problem, the Fourier Transform is used, because using it will change the differential operator into a simple multiplication. The process is shown in equation 10, where k denotes the wave number according to the current position $x$ and $\mathcal{F}$ denotes the Fourier Transform. (Schloss, 2022)
 
