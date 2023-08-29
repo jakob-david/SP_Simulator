@@ -84,11 +84,17 @@ Due to the fact that a division by $0$ is not allowed, one must choose a suffici
 
 The results shown in Figure 1 are valid in the case of a free wave and therefore $V=0$. Furthermore, to highlight the effect of the Newtonian gravitational potential ${\hat{H}}_x$ was slightly modified to ${\hat{H}}_x=V+ {5V}init$ and periodic boundary conditions were used. As initial condition two gaussians were utilised, which were normalised in a way that the area bellow the curve is equal to $1$. The code can be found in this repository.
 
- <div class="column">
-  <div class="row">
-    <img height="300" width="400" src="./pictures_for_readme/picture_1.png">
-  </div>
-  <div class="row">
-    <img height="300" width="400" src="./pictures_for_readme/picture_2.png">
-  </div>
-</div>
+<p align="center">
+  <img height="300" width="900" src="./pictures_for_readme/picture_1.png">
+</p>
+
+In Figure 1 the two initial gaussians attract one another, which is exactly what was expected. After they first meet each other around time-step 50 they move past one another and after that they move away from each other. This is because the peaks gather momentum until they meet. The gathered momentum then pushes them away from each other afterwards. With more and more time-steps have passed this attracting and moving apart from one another becomes far less pronounced until they eventually form one peak in the wave. 
+
+In the next step, the code was adapted to the linear case of the Schrödinger equation. The momentum that was used is displayed in equation 13. 
+
+$$V=0.05x^2 $$
+
+The result can be seen in Figure 2. The potential is pushing the two gaussian peaks even stronger towards each other. Therefore, the point of the first meeting is around time-step 25. The frequency of the meeting points is increased because of the potential. This is again as expected. 
+
+### Simulating a 2D-Particle 
+
