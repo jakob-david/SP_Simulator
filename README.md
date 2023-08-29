@@ -68,5 +68,7 @@ Next, it can be observed that the part in position space and the part in momentu
 Because, the Fourier Transform is computationally inefficient, the Fast Fourier Transform (FFT) will be used. One complete timestep of the algorithm is displayed in equation 11, where $\mathcal{F}$ now denotes the FFT, ${\hat{U}}_x=e^{-i\hat{H}_x∆t}$ and ${\hat{U}}_k=e^{-i\hat{H}_k∆t}$. (Schloss, 2022)
 
 ```math
-u(x,t+∆t)=[\hat{U}_k(∆t)\mathcal{F}[\hat{U}_x∆tu(x,t)]] +O(∆t^{2})
+u(x,t+∆t)=[\hat{U}_k(∆t)\mathcal{F}[\hat{U}_x(∆t)u(x,t)]] +O(∆t^{2})
 ```
+
+Now the algorithm for simulation the Schrödinger Equation is finished and can be easily adapted. Sine the Newtonian term also uses a differential operator, the FFT is used as well as is shown below (Johansson, 2010)
