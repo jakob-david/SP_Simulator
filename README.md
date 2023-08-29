@@ -26,3 +26,7 @@ i\hbar\frac{\partial u}{\partial t}=-\frac{\hbar^2}{2m}\frac{\partial^2u}{\parti
 ```math
 \Phi=\ \frac{1}{\nabla^2}4\pi Gm\left|u\right|^2
 ```
+
+### Scaling 
+
+Since the focus of this project lies only on solving the system numerically, the equations will be scaled by introducing a new dimension-less parameter $\varepsilon=\frac{\hbar}{m}$ and define a new potential with $V_{new}=\ \frac{V_{old}\ }{m}$. Furthermore, for the sake of simplicity, it will be assumed that  $\varepsilon\defeq1$ and $4\pi G\defeq1$. The new system is shown in equation 5 (Mauser & Stimming, 2021) and 6. 
