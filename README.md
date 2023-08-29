@@ -54,7 +54,7 @@ u(x,t+∆t)=[e^{-i\hat{H}∆t}] u\left(x,t\right)=[e^{i(\hat{H}_x+\hat{H}_k)∆t
 Using the Baker-Campbell-Housdorff theorem this solution can be split. The thus retrieved formula is shown in equation 9. (Schloss, 2022)
 
 ```math
-u(x,t+∆t)=[e^{-i\hat{H}_x∆t}e^{-i|\hat{H}_k∆t}e^{[i\hat{H}_x,i\hat{H}_k]∆t2}]u(x,t)
+u(x,t+∆t)=[e^{-i\hat{H}_x∆t}e^{-i\hat{H}_k∆t}e^{[i\hat{H}_x,i\hat{H}_k]∆t^2}]u(x,t)
 ```
 
 
