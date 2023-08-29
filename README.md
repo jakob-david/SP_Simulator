@@ -14,5 +14,6 @@ The equation only gets a physical meaning if it is squared and integrated as sho
 ```math
 \begin{equation}
 E = mc^2
+\label{pi}
 \end{equation}
 ```
