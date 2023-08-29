@@ -53,5 +53,8 @@ u(x,t+∆t)=[e^{-iH∆t}] u\left(x,t\right)=[e^{i(H_x+H_k)∆t}]u(x,t)
 
 Using the Baker-Campbell-Housdorff theorem this solution can be split. The thus retrieved formula is shown in equation 9. (Schloss, 2022)
 
+```math
+u(x,t+∆t)=[e^{-iH_x∆t}]
+```
 
 
