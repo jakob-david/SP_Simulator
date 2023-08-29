@@ -14,9 +14,10 @@ The equation only gets a physical meaning if it is squared and integrated as sho
 $$
 \int_{a}^{b}{\left|u(x,t)\right|^2dx}=p
 $$
+
 Where $p$ is the probability of finding the particle between $a$ and $b$, at time $t$.
 
-In general, there are three cases of this equation. The first is the free case with V=0, the second is the linear case is V=V(x) where the potential is only dependent on space and the non-linear case with V=V(x,u) (Mauser & Stimming, 2021). Since in the last case the potential is also dependent on the solution the whole equation becomes non-linear. The last non-linear case will not be discussed here. However, the written code can treat such potentials as well. 
+In general, there are three cases of this equation. The first is the free case with $V=0$, the second is the linear case is $V=V(x)$ where the potential is only dependent on space and the non-linear case with $V=V(x,u)$ (Mauser & Stimming, 2021). Since in the last case the potential is also dependent on the solution the whole equation becomes non-linear. The last non-linear case will not be discussed here. However, the written code can treat such potentials as well. 
 
 The Schrödinger-Poisson equation modifies equation 1 by adding a Newtonian gravitational potential. Hereby, the probability density is interpreted as a mass density. The full PDE is given in equation 3 and 4. Such a system can also be used to describe things like exotic dark matter. (Mocz, 2023)
 
