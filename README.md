@@ -72,3 +72,7 @@ u(x,t+∆t)=[\hat{U}_k(∆t)\mathcal{F}[\hat{U}_x(∆t)u(x,t)]] +O(∆t^{2})
 ```
 
 Now the algorithm for simulation the Schrödinger Equation is finished and can be easily adapted. Sine the Newtonian term also uses a differential operator, the FFT is used as well as is shown below (Johansson, 2010)
+
+```math
+V_{int}=\frac{1}{\nabla^2}\left|u_x\right|^2=\mathcal{F}^{-1}\left[\frac{1}{{k_x}^2}\mathcal{F}\left[\left|u_x\right|^2\right]\right]
+```
