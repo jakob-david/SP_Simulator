@@ -80,3 +80,6 @@ $$
 
 Due to the fact that a division by $0$ is not allowed, one must choose a sufficiently small number greater than $0$ in the case that the wave number is $0$. The result of equation 12 can be thought of as a somewhat internal potential due to the Newtonian gravitational force. The routine in equation 11 will basically stay the same. The only thing that changes is the operator ${\hat{H}}_x$ which now will be ${\hat{H}}_x=V+Vinit$ instead of just $V$ (Johansson, 2010).
 
+### Simulating a 1D-Particle 
+
+The results shown in Figure 1 are valid in the case of a free wave and therefore $V=0$. Furthermore, to highlight the effect of the Newtonian gravitational potential ${\hat{H}}_x$ was slightly modified to ${\hat{H}}_x=V+ {5V}_init$ and periodic boundary conditions were used. As initial condition two gaussians were utilised, which were normalised in a way that the area bellow the curve is equal to 1. The code can be found in repository.
