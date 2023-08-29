@@ -6,11 +6,11 @@ grid_parameters = GridParameters()
 grid = Grid(grid_parameters)
 
 my_sym = Simulation(grid, grid_parameters.input_gravity, grid_parameters.potential_function)
-my_sym.initFunction(grid_parameters.initial_function)
+my_sym.set_init_function(grid_parameters.initial_function)
 
-my_sym.SO_Poisson_2D()
+my_sym.start_split_operator()
 
-my_sym.gif()
+# my_sym.gif()
 
 my_sym.heatmap(0, True, True)
 my_sym.heatmap(100, True, True)

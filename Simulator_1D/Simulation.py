@@ -19,7 +19,7 @@ class Simulation:
         """
         Sets the initial function of the system.
 
-        :param func: The function to which the initial function should be set to.
+        :param func: The function to which the initial function should be set to. (wrapper function)
         """
         self.grid.set_init_function(func)
 
@@ -69,7 +69,7 @@ class Simulation:
 
     def start_split_operator(self):
         """
-        Starts the simulation of the Schrödinger Poison equation using the split operator method.
+        Starts the 1D simulation of the Schrödinger Poison equation using the split operator method.
         """
 
         self.grid.method = "Split-Time"

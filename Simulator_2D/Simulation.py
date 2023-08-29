@@ -19,28 +19,66 @@ class Simulation:
 
     # Some wrapper functions
     ##################################
-    def initFunction(self, func):
+    def set_init_function(self, func):
+        """
+        Sets the initial function of the system.
+
+        :param func: The function to which the initial function should be set to. (wrapper function)
+        """
+
         self.grid.set_init_function(func)
 
-    def plot3D(self, time_step=0, square=True, use_for_gif=False):
-        self.grid.plot_3d(time_step, square, use_for_gif)
+    def plot_3d(self, time_step=0, square=True):
+        """
+        Funktion prints a 3D wireframe of the system at one specified timestep. (wrapper function)
+
+        :param time_step: The timestep of the plot.
+        :param square: Set to true if the function in the graph should be squared.
+        """
+
+        self.grid.plot_3d(time_step, square)
 
     def heatmap(self, time_step=0, square=True, save=False):
+        """
+        Makes a heatmap of the system at a given timestep. (wrapper function)
+
+        :param time_step: The timestep which should be plotted.
+        :param square: Set to true if the system should be squared.
+        :param save: Set true if the plot should be saved instead of shown.
+        """
+
         self.grid.heatmap(time_step, square, save)
 
-    def plotEnergyEvolution(self, save=False, log=False):
+    def plot_energy_evolution(self, save=False, log=False):
+        """
+        Plots the energy evolution of the system. (wrapper function)
+
+        :param save: Set true if the plot should be saved instead of shown.
+        :param log: Set true if the log should be taken for the y-axis.
+        """
+
         self.grid.plot_energy_evolution(save, log)
 
     def gif(self):
+        """
+        Makes a gif of the whole system. Consisting of a 3D plot of every timestep. (wrapper function)
+        """
+
         self.grid.gif()
 
-    def plot3DPotential(self, download=False):
-        self.grid.plot_3d_potential(download)
+    def plot_3d_potential(self, save=False):
+        """
+        Plots the potential as a 3D graph. (wrapper function)
 
-    # Split-Time Poisson
-    ##################################
-    def SO_Poisson_2D(self, adjust_dt=False):
-        self.grid.method = "Split-Time Poisson"
+        :param save: Set true if the plot should be saved instead of shown.
+        """
+
+        self.grid.plot_3d_potential(save)
+
+    def start_split_operator(self):
+        """
+        Starts the 2D simulation of the Schrödinger Poison equation using the split operator method.
+        """
 
         dt = self.grid.grid_parameters.time_step_size
 
