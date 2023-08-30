@@ -104,3 +104,19 @@ k_{2D}=\sqrt{{k_x}^{2}+{k_y}^{2}}
 $$
 
 The results of the simulation can be shown in Figure 3. As initial condition two 2D gaussians were used which were again normalised in a way that the total volume is equal to $1$. The two gaussian peaks behave as expected from the 1D case. They attract one another and after they meet, they travel past one another. The whole code fan be found in this repository inside the folder "Simulation_2D". 
+
+<p align="center">
+  <img src="zz_pictures_for_readme/picture_2.png" alt="Figure 1 and Figure 2">
+</p>
+
+<p align="center">
+  <img src="zz_pictures_for_readme/picture_3.png" alt="Figure 1 and Figure 2">
+</p>
+
+<p align="center">
+  <img src="zz_pictures_for_readme/picture_4.png" alt="Figure 1 and Figure 2">
+</p>
+
+### Bibliography
+
+- Griffiths, D. J., & Schroeter, D. F. (2018). Introduction to quantum mechanics. Second edition. Cambridge: Cambridge University Press
