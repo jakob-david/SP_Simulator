@@ -85,7 +85,7 @@ Due to the fact that a division by $0$ is not allowed, one must choose a suffici
 The results shown in Figure 1 are valid in the case of a free wave and therefore $V=0$. Furthermore, to highlight the effect of the Newtonian gravitational potential ${\hat{H}}_x$ was slightly modified to ${\hat{H}}_x=V+ {5V}init$ and periodic boundary conditions were used. As initial condition two gaussians were utilised, which were normalised in a way that the area bellow the curve is equal to $1$. The code can be found in this repository.
 
 <p align="center">
-  <img src="zz_pictures_for_readme/picture_1.png">
+  <img src="zz_pictures_for_readme/picture_1.png" alt="Figure 1 and Figure 2">
 </p>
 
 In Figure 1 the two initial gaussians attract one another, which is exactly what was expected. After they first meet each other around time-step 50 they move past one another and after that they move away from each other. This is because the peaks gather momentum until they meet. The gathered momentum then pushes them away from each other afterwards. With more and more time-steps have passed this attracting and moving apart from one another becomes far less pronounced until they eventually form one peak in the wave. 
@@ -97,4 +97,4 @@ $$V=0.05x^2 $$
 The result can be seen in Figure 2. The potential is pushing the two gaussian peaks even stronger towards each other. Therefore, the point of the first meeting is around time-step 25. The frequency of the meeting points is increased because of the potential. This is again as expected. 
 
 ### Simulating a 2D-Particle 
-
+The code can easily be adapted from simulating a 1D-particle to simulating a 2D-particle in the $V=0$ case. Unfortunately, the representation of the system is a little bit harder than in the 1D case. Therefore, now only a few time-steps of the simulation are displayed. Like in the 1D case ${\hat{H}}_x$ was slightly modified to ${\hat{H}}_x=V+5Vint$. As for the 1D case periodic boundary conditions were used. The most challenging part extend the code into the 2D case was to get the right matrix of wave numbers. The correct calculation is shown in equation 14. 
