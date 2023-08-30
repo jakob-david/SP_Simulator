@@ -82,7 +82,7 @@ Due to the fact that a division by $0$ is not allowed, one must choose a suffici
 
 ### Simulating a 1D-Particle 
 
-The results shown in Figure 1 are valid in the case of a free wave and therefore $V=0$. Furthermore, to highlight the effect of the Newtonian gravitational potential ${\hat{H}}_x$ was slightly modified to ${\hat{H}}_x=V+ {5V}init$ and periodic boundary conditions were used. As initial condition two gaussians were utilised, which were normalised in a way that the area bellow the curve is equal to $1$. The code can be found in this repository.
+The results shown in Figure 1 are valid in the case of a free wave and therefore $V=0$. Furthermore, to highlight the effect of the Newtonian gravitational potential ${\hat{H}}_x$ was slightly modified to ${\hat{H}}_x=V+ {5V}init$ and periodic boundary conditions were used. As initial condition two gaussians were utilised, which were normalised in a way that the area bellow the curve is equal to $1$. The code can be found in this repository inside the folder "Simulation_1D".
 
 <p align="center">
   <img src="zz_pictures_for_readme/picture_1.png" alt="Figure 1 and Figure 2">
@@ -98,3 +98,9 @@ The result can be seen in Figure 2. The potential is pushing the two gaussian pe
 
 ### Simulating a 2D-Particle 
 The code can easily be adapted from simulating a 1D-particle to simulating a 2D-particle in the $V=0$ case. Unfortunately, the representation of the system is a little bit harder than in the 1D case. Therefore, now only a few time-steps of the simulation are displayed. Like in the 1D case ${\hat{H}}_x$ was slightly modified to ${\hat{H}}_x=V+5Vint$. As for the 1D case periodic boundary conditions were used. The most challenging part extend the code into the 2D case was to get the right matrix of wave numbers. The correct calculation is shown in equation 14. 
+
+$$
+k_{2D}=\sqrt{{k_x}^{2}+{k_y}^{2}}
+$$
+
+The results of the simulation can be shown in Figure 3. As initial condition two 2D gaussians were used which were again normalised in a way that the total volume is equal to $1$. The two gaussian peaks behave as expected from the 1D case. They attract one another and after they meet, they travel past one another. The whole code fan be found in this repository inside the folder "Simulation_2D". 
