@@ -120,3 +120,7 @@ The results of the simulation can be shown in Figure 3. As initial condition two
 ### Bibliography
 
 - Griffiths, D. J., & Schroeter, D. F. (2018). Introduction to quantum mechanics. Second edition. Cambridge: Cambridge University Press
+- Mauser, H., & Stimming, H. P. (2021). Scriptum: Nonlinear Schrödinger and Wave Equations. Vienna.
+- Johansson, F. D. (2010). Simulation of the Maxwell-Dirac and Schrödinger-Poisson systems. Göteborg.
+- Mocz, P. (2023, 1 25). Create Your Own Quantum Mechanics Simulation (With Python). From gitconnected: https://levelup.gitconnected.com/create-your-own-quantum-mechanics-simulation-with-python-51e215346798
+- Schloss, J. (2022, 12 9). The Split-Operator Method. From algorithm-archive: https://www.algorithm-archive.org/contents/split-operator_method/split-operator_method.html
