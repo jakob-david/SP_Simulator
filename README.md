@@ -85,7 +85,8 @@ Due to the fact that a division by $0$ is not allowed, one must choose a suffici
 The results shown in Figure 1 are valid in the case of a free wave and therefore $V=0$. Furthermore, to highlight the effect of the Newtonian gravitational potential ${\hat{H}}_x$ was slightly modified to ${\hat{H}}_x=V+ {5V}init$ and periodic boundary conditions were used. As initial condition two gaussians were utilised, which were normalised in a way that the area bellow the curve is equal to $1$. The code can be found in this repository inside the folder "Simulation_1D".
 
 <p align="center">
-  <img src="zz_pictures_for_readme/picture_1.png" alt="Figure 1 and Figure 2">
+    <img src="zz_pictures_for_readme/picture_1.png" alt="Figure 1 and Figure 2">
+    <em>Image 1 (left) and Image 2 (right)</em>
 </p>
 
 In Figure 1 the two initial gaussians attract one another, which is exactly what was expected. After they first meet each other around time-step 50 they move past one another and after that they move away from each other. This is because the peaks gather momentum until they meet. The gathered momentum then pushes them away from each other afterwards. With more and more time-steps have passed this attracting and moving apart from one another becomes far less pronounced until they eventually form one peak in the wave. 
@@ -106,15 +107,18 @@ $$
 The results of the simulation can be shown in Figure 3. As initial condition two 2D gaussians were used which were again normalised in a way that the total volume is equal to $1$. The two gaussian peaks behave as expected from the 1D case. They attract one another and after they meet, they travel past one another. The whole code fan be found in this repository inside the folder "Simulation_2D". 
 
 <p align="center">
-  <img src="zz_pictures_for_readme/picture_2.png" alt="Figure 1 and Figure 2">
+    <img src="zz_pictures_for_readme/picture_2.png" alt="Figure 1 and Figure 2">
+    Image 3 (left) and Image 4 (right)
 </p>
 
 <p align="center">
-  <img src="zz_pictures_for_readme/picture_3.png" alt="Figure 1 and Figure 2">
+    <img src="zz_pictures_for_readme/picture_3.png" alt="Figure 1 and Figure 2">
+    Image 5 (left) and Image 6 (right)
 </p>
 
 <p align="center">
-  <img src="zz_pictures_for_readme/picture_4.png" alt="Figure 1 and Figure 2">
+    <img src="zz_pictures_for_readme/picture_4.png" alt="Figure 1 and Figure 2">
+    Image 7 (left) and Image 8 (right)
 </p>
 
 ### Bibliography
@@ -124,3 +128,8 @@ The results of the simulation can be shown in Figure 3. As initial condition two
 - Johansson, F. D. (2010). Simulation of the Maxwell-Dirac and Schrödinger-Poisson systems. Göteborg.
 - Mocz, P. (2023, 1 25). Create Your Own Quantum Mechanics Simulation (With Python). From gitconnected: https://levelup.gitconnected.com/create-your-own-quantum-mechanics-simulation-with-python-51e215346798
 - Schloss, J. (2022, 12 9). The Split-Operator Method. From algorithm-archive: https://www.algorithm-archive.org/contents/split-operator_method/split-operator_method.html
+
+
+### Comments 
+
+Sorry but I had troubles including the numbering for the equations, so they are not included.....
