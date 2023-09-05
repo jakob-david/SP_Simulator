@@ -86,7 +86,7 @@ The results shown in Figure 1 are valid in the case of a free wave and therefore
 
 <p align="center">
     <img src="zz_pictures_for_readme/picture_1.png" alt="Figure 1 and Figure 2">
-    <em>Image 1 (left) and Image 2 (right)</em>
+    <em>Figure 1 (left) and Figure 2 (right)</em>
 </p>
 
 In Figure 1 the two initial gaussians attract one another, which is exactly what was expected. After they first meet each other around time-step 50 they move past one another and after that they move away from each other. This is because the peaks gather momentum until they meet. The gathered momentum then pushes them away from each other afterwards. With more and more time-steps have passed this attracting and moving apart from one another becomes far less pronounced until they eventually form one peak in the wave. 
@@ -106,19 +106,19 @@ $$
 
 The results of the simulation can be shown in Figure 3. As initial condition two 2D gaussians were used which were again normalised in a way that the total volume is equal to $1$. The two gaussian peaks behave as expected from the 1D case. They attract one another and after they meet, they travel past one another. The whole code fan be found in this repository inside the folder "Simulation_2D". 
 
-<p align="center">
+<p>
     <img src="zz_pictures_for_readme/picture_2.png" alt="Figure 1 and Figure 2">
-    Image 3 (left) and Image 4 (right)
+    Figure 3 (left) and Figure 4 (right)
 </p>
 
 <p align="center">
     <img src="zz_pictures_for_readme/picture_3.png" alt="Figure 1 and Figure 2">
-    Image 5 (left) and Image 6 (right)
+    Figure 5 (left) and Figure 6 (right)
 </p>
 
 <p align="center">
     <img src="zz_pictures_for_readme/picture_4.png" alt="Figure 1 and Figure 2">
-    Image 7 (left) and Image 8 (right)
+    Figure 7 (left) and Figure 8 (right)
 </p>
 
 ### Bibliography
