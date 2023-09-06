@@ -86,7 +86,7 @@ The results shown in Figure 1 are valid in the case of a free wave and therefore
 
 <p align="center">
     <img src="zz_pictures_for_readme/picture_1.png" alt="Figure 1 and Figure 2">
-    <em> Figure 1 (left) and Figure 2 (right) </em>
+    Figure 1 (left) and Figure 2 (right)
 </p>
 
 In Figure 1 the two initial gaussians attract one another, which is exactly what was expected. After they first meet each other around time-step 50 they move past one another and after that they move away from each other. This is because the peaks gather momentum until they meet. The gathered momentum then pushes them away from each other afterwards. With more and more time-steps have passed this attracting and moving apart from one another becomes far less pronounced until they eventually form one peak in the wave. 
