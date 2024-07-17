@@ -85,7 +85,7 @@ Since a division by $0$ is not allowed, one must choose a sufficiently small num
 The results shown in Figure 1 are valid for a free wave and, therefore, $V=0$. Furthermore, to highlight the effect of the Newtonian gravitational potential ${\hat{H}}_x$ was slightly modified to ${\hat{H}}_x=V+ {5V}init$ and periodic boundary conditions were used. As an initial condition, two Gaussians were utilized, which were normalized so that the area below the curve equals $1$. The code can be found in this repository inside the folder "Simulation_1D".
 
 <p align="center">
-    <img src="zz_pictures_for_readme/picture_1.png" alt="Figure 1 and Figure 2">
+    <img src="pictures/picture_1.png" alt="Figure 1 and Figure 2">
     Figure 1 (left) and Figure 2 (right)
 </p>
 
@@ -104,20 +104,20 @@ $$
 k_{2D}=\sqrt{{k_x}^{2}+{k_y}^{2}}
 $$
 
-The results of the simulation can be shown in Figure 3. As an initial condition, two 2D Gaussians were used, which were again normalized so that the total volume was equal to $1$. The two Gaussian peaks behave as expected from the 1D case. They attract one another, and after they meet, they travel past one another. The whole code can be found in this repository inside the folder "Simulation_2D." 
+The results of the simulation can be shown in Figure 3. As an initial condition, two 2D Gaussians were used, which were again normalized so that the total volume was equal to $1$. The two Gaussian peaks behave as expected from the 1D case. They attract one another, and they travel past one another after they meet. The whole code can be found in this repository inside the folder "Simulation_2D." 
 
 <p align="center">
-    <img src="zz_pictures_for_readme/picture_2.png" alt="Figure 1 and Figure 2">
+    <img src="pictures/picture_2.png" alt="Figure 1 and Figure 2">
     Figure 3 (left) and Figure 4 (right)
 </p>
 
 <p align="center">
-    <img src="zz_pictures_for_readme/picture_3.png" alt="Figure 1 and Figure 2">
+    <img src="pictures/picture_3.png" alt="Figure 1 and Figure 2">
     Figure 5 (left) and Figure 6 (right)
 </p>
 
 <p align="center">
-    <img src="zz_pictures_for_readme/picture_4.png" alt="Figure 1 and Figure 2">
+    <img src="pictures/picture_4.png" alt="Figure 1 and Figure 2">
     Figure 7 (left) and Figure 8 (right)
 </p>
 
